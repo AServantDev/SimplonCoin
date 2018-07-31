@@ -25,10 +25,10 @@ public class Application {
     	CompteCourant myAccount2 = new CompteCourant();
     	myAccount2.setNumeroCompte("0678459703");
     	myAccount2.setOwner("Antoine");
-    	myAccount2.setMoney(1200);
+    	myAccount2.setMoney(2000);
     	myAccount2.setPlafondMin(100);
     	
-    	myAccount.solvabilite(1200);
+    	
     	myAccount.prelevement(myAccount2);
     	
     }

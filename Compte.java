@@ -96,7 +96,7 @@ public class Compte {
         	System.out.println("Le solde de " + compteBene.getOwner() + " est de " + compteBene.money);
         	   System.out.println("Combien d'argent voulez vous virer?");
         		int input2 = sc.nextInt();
-        		if(compteBene.solvabilite(input2) == true) {
+        		if(solvabilite(input2) == true) {
             	money = money -input2;
             	compteBene.money = compteBene.money  + input2;
             	System.out.println("Le nouveau solde d' " + getOwner() + " est de " + money);
@@ -110,7 +110,7 @@ public class Compte {
      * 
      */
     public boolean solvabilite(int a) {
-        if(a >= getPlafondMin() + money) {
+        if( getMoney() - a < getPlafondMin() ) {
         	System.out.println("Vous ne pouvez pas prélever / virer de l'argent");
         	return false;
         }
